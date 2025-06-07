@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eid Mubarak Greetings from Shanto - Celebrate Eid-ul-Adha with joy and blessings">
+    <meta name="keywords" content="Eid Mubarak, Eid-ul-Adha, Shanto, Islamic Greetings, Festival">
+    <title>Eid Mubarak from Shanto | ঈদ মোবারক শান্তর পক্ষ থেকে</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'SolaimanLipi', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6f5e6 0%, #b3e0b3 50%, #1a1a1a 100%);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header Styles */
+        header {
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h1.bangla {
+            font-family: 'SolaimanLipi', 'Arial', sans-serif;
+            font-size: 2.8rem;
+            margin-top: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+
+        .subtitle.bangla {
+            font-family: 'SolaimanLipi', 'Arial', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 5px;
+        }
+
+        /* Cow Animation Styles */
+        .cow-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            perspective: 1000px;
+        }
+
+        .cow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: dance 4s infinite ease-in-out;
+        }
+
+        .cow-body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M100,50 Q150,30 180,80 Q190,120 160,150 Q130,180 100,170 Q70,180 40,150 Q10,120 20,80 Q50,30 100,50" fill="white" stroke="black" stroke-width="2"/><circle cx="130" cy="70" r="10" fill="black"/><circle cx="70" cy="70" r="10" fill="black"/><path d="M80,100 Q100,120 120,100" fill="none" stroke="black" stroke-width="2"/><path d="M50,40 Q40,20 30,30" fill="none" stroke="black" stroke-width="2"/><path d="M150,40 Q160,20 170,30" fill="none" stroke="black" stroke-width="2"/></svg>') no-repeat center center;
+            background-size: contain;
+            transform: translateZ(20px);
+        }
+
+        .cow-legs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M120,150 L130,180 L135,180 L125,150 Z" fill="black"/><path d="M80,150 L70,180 L65,180 L75,150 Z" fill="black"/><path d="M160,150 L170,180 L175,180 L165,150 Z" fill="black"/><path d="M40,150 L30,180 L25,180 L35,150 Z" fill="black"/></svg>') no-repeat center center;
+            background-size: contain;
+            transform: translateZ(10px);
+            animation: legsMove 1s infinite alternate;
+        }
+
+        /* Greeting Styles */
+        .greeting {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            max-width: 650px;
+            animation: slideUp 1.5s ease-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .greeting-section {
+            margin-bottom: 20px;
+        }
+
+        .greeting p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .greeting .bangla {
+            font-family: 'SolaimanLipi', 'Arial', sans-serif;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.3);
+        }
+
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-top: 15px;
+        }
+
+        .signature.bangla {
+            font-family: 'Bangla', 'SolaimanLipi', cursive;
+            font-size: 2rem;
+        }
+
+        /* Emoji Styles */
+        .emoji {
+            font-size: 2rem;
+            animation: bounce 1s infinite alternate;
+        }
+
+        /* Decorative Elements */
+        .eid-theme {
+            position: absolute;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        .moon {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            width: 60px;
+            height: 60px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23ffcc00"/></svg>') no-repeat center center;
+            background-size: contain;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .lantern {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            width: 40px;
+            height: 60px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 60"><rect x="5" y="5" width="30" height="50" rx="5" fill="%23ff3333" stroke="%23cc0000" stroke-width="2"/><rect x="15" y="0" width="10" height="5" fill="%23cc9900"/><path d="M10,15 L30,15 M10,25 L30,25 M10,35 L30,35 M10,45 L30,45" stroke="%23ffcc00" stroke-width="2"/></svg>') no-repeat center center;
+            background-size: contain;
+            animation: swing 3s infinite ease-in-out;
+            transform-origin: top center;
+        }
+
+        .mosque {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100"><rect x="50" y="30" width="50" height="40" fill="%23336699"/><rect x="60" y="40" width="10" height="30" fill="%23ffffff"/><rect x="80" y="40" width="10" height="30" fill="%23ffffff"/><path d="M50,30 L75,0 L100,30 Z" fill="%23cc0000"/><circle cx="75" cy="15" r="5" fill="%23ffcc00"/><rect x="0" y="70" width="150" height="30" fill="%23555555"/><rect x="20" y="50" width="20" height="20" fill="%23336699"/><path d="M20,50 L30,30 L40,50 Z" fill="%23cc0000"/><rect x="110" y="50" width="20" height="20" fill="%23336699"/><path d="M110,50 L120,30 L130,50 Z" fill="%23cc0000"/></svg>') no-repeat center center;
+            background-size: contain;
+            opacity: 0.8;
+        }
+
+        .mosque.right {
+            left: auto;
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #ddd;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        footer .bangla {
+            font-family: 'SolaimanLipi', 'Arial', sans-serif;
+            margin-top: 5px;
+        }
+
+        /* Animations */
+        @keyframes dance {
+            0%, 100% { transform: rotateY(0) translateY(0); }
+            25% { transform: rotateY(10deg) translateY(-10px); }
+            50% { transform: rotateY(-10deg) translateY(0); }
+            75% { transform: rotateY(5deg) translateY(-5px); }
+        }
+
+        @keyframes legsMove {
+            0% { transform: translateZ(10px) rotateX(0); }
+            100% { transform: translateZ(10px) rotateX(20deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h1.bangla {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .subtitle.bangla {
+                font-size: 1.2rem;
+            }
+            
+            .greeting p {
+                font-size: 1rem;
+            }
+            
+            .greeting .bangla {
+                font-size: 1.1rem;
+            }
+            
+            .cow-container {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .mosque, .mosque.right {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            h1.bangla {
+                font-size: 1.7rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .greeting {
+                padding: 15px;
+            }
+            
+            .cow-container {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .moon {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .lantern {
+                width: 30px;
+                height: 45px;
+            }
+            
+            .emoji {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Decorative Elements -->
+        <div class="moon eid-theme"></div>
+        <div class="lantern eid-theme"></div>
+        <div class="mosque eid-theme"></div>
+        <div class="mosque right eid-theme"></div>
+        
+        <!-- Main Content -->
+        <header>
+            <h1>
+                <span>Eid Mubarak</span>
+                <span class="emoji">🎉 🕌 🎊</span>
+            </h1>
+            <h1 class="bangla">
+                <span>ঈদ মোবারক</span>
+                <span class="emoji">✨ 🌙 ✨</span>
+            </h1>
+            <p class="subtitle">Wishing you a blessed Eid-ul-Adha</p>
+            <p class="subtitle bangla">আপনাকে ঈদ-উল-আযহার শুভেচ্ছা</p>
+        </header>
+        
+        <div class="cow-container">
+            <div class="cow">
+                <div class="cow-body"></div>
+                <div class="cow-legs"></div>
+            </div>
+        </div>
+        
+        <div class="greeting">
+            <div class="greeting-section">
+                <p>As we celebrate Eid-ul-Adha, I pray that Allah accepts your good deeds, forgives your transgressions, and eases the suffering of all people around the globe.</p>
+                <p>May this special day bring peace, joy, and prosperity to you and your family. Eid Mubarak!</p>
+                <div class="signature">From Shanto</div>
+            </div>
+            
+            <div class="greeting-section bangla">
+                <p>ঈদ-উল-আযহা উদযাপনের এই মহান দিনে, আমি প্রার্থনা করি আল্লাহ আপনার সকল নেক আমল কবুল করুন, আপনার ভুলত্রুটিগুলো ক্ষমা করুন এবং সমগ্র বিশ্বের মানুষের দুঃখ-কষ্ট লাঘব করুন।</p>
+                <p>এই পবিত্র দিনটি আপনার ও আপনার পরিবারের জীবনে শান্তি, আনন্দ ও সমৃদ্ধি বয়ে আনুক। ঈদ মোবারক!</p>
+                <div class="signature bangla">শান্তর পক্ষ থেকে</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© <span id="year"></span> Eid Greetings | Made with ❤️</p>
+            <p class="bangla">© <span id="year-bangla"></span> ঈদ শুভেচ্ছা | হৃদয় দিয়ে তৈরি</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        const year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+        document.getElementById('year-bangla').textContent = year;
+        
+        // Create confetti effect
+        function createConfetti() {
+            const colors = ['#ff0000', '#ffcc00', '#00cc00', '#0066ff', '#cc00ff'];
+            const container = document.querySelector('.container');
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 3 + 2;
+                const delay = Math.random() * 5;
+                
+                // Apply styles
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${left}vw`;
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                confetti.style.animation = `confettiFall ${animationDuration}s linear ${delay}s forwards`;
+                
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, (animationDuration + delay) * 1000);
+            }
+        }
+        
+        // Initial confetti
+        createConfetti();
+        
+        // Confetti every 3 seconds
+        setInterval(createConfetti, 3000);
+        
+        // Cow click interaction
+        document.querySelector('.cow-container').addEventListener('click', function() {
+            this.classList.add('cow-clicked');
+            createConfetti();
+            
+            setTimeout(() => {
+                this.classList.remove('cow-clicked');
+            }, 1000);
+        });
+        
+        // Audio on interaction
+        document.addEventListener('click', function() {
+            const audio = new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU...'); // Short base64 encoded audio
+            audio.volume = 0.3;
+            audio.play().catch(e => console.log('Audio play failed:', e));
+        }, { once: true });
+    </script>
+</body>
+</html>
